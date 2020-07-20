@@ -1,0 +1,92 @@
+{"intents": [
+        {"tag": "goodbye",
+         "responses": ["See you later", "Have a nice day", "Bye! Come back again soon."],
+         "context_set": "goodbye"
+        },
+        {"tag": "greeting",
+         "responses": ["Hello,Welcome to Healthelligent bot. How can i help you??"],
+         "context_set": "greeting"
+        },
+        {"tag": "cardiology",
+         "responses": ["Please, select the preferred doctor  - doctor Arvind   ,  doctor Sahu"],
+         "context_set": "cardiology"
+        },
+        {"tag": "neurology",
+         "responses": ["Please, select the preferred doctor  - doctor Ashwin  , doctor Urvashi"],
+         "context_set": "neurology"
+        },
+        {"tag": "orthopedician",
+         "responses": ["Please, select the preferred doctor  - doctor Ajay   ,  doctor rekha"],
+         "context_set": "orthopedician"
+        },
+        {"tag": "general physician",
+         "responses": ["Please, select the preferred doctor  - doctor kanjus   , doctor akshay"],
+         "context_set": "general physician"
+        },
+        
+        {"tag": "Yeah",
+         "responses": ["May i know the Doctor's name??"],
+         "context_set": "Yeah"
+        },
+        {"tag": "nopes",
+         "responses": ["Ok, no issue, please select the preferred speciality - Cardiology , Neurology  ,  Orthopedician  , General Physician   "],
+         "context_set": "nopes"
+        },
+        {"tag": "doctor",
+         "responses": ["Please mention the preferred day and time for the appointment?"],
+         "context_set": "doctor"
+        },
+        {"tag": "doctor_day",
+         "responses": ["May I know the preferred location and time for the appointment"],
+         "context_set": "doctor_day"
+        },
+        {"tag": "appointment",
+         "responses": ["Sure, I would be happy to do that, Do you know Doctor's name?"],
+         "context_set": "appointment"
+        },
+         {"tag": "doctor_day_time",
+         "responses": ["May I know the preferred location for the appointment?"],
+         "context_set": "doctor_day_time"
+        },
+        {"tag": "day",
+         "responses": ["May I know the preferred Doctors name and time for the appointment"],
+         "context_set": "day"
+        },
+         {"tag": "doctor_time",
+         "responses": ["May I know the preferred day for the appointment"],
+         "context_set": "doctor_time"
+        },
+        {"tag": "online",
+         "responses": ["Ok, we have sent you a confirmation message on your registered mobile number alongwith the payment link."],
+         "context_set": "online"
+        },
+        {"tag": "hospital",
+         "responses": ["Ok, we have sent you a confirmation message on your registered mobile number."],
+         "context_set": "hospital"
+        },
+        {"tag": "Thanks",
+         "responses": ["My pleasure. Is there anything else, I can help you with?"],
+         "context_set": "Thanks"
+        },
+        {"tag": "Thanks",
+         "responses": ["My pleasure. Is there anything else, I can help you with?"],
+         "context_set": "Thanks"
+        },
+        {"tag": "Bye",
+         "responses": ["Bye bye"],
+         "context_set": "Bye"
+        },
+        {"tag": "day_time",
+         "responses": ["May I know the doctor's name?"],
+         "context_set": "day_time"
+        },
+        {"tag": "doctor_time",
+         "responses": ["May I know the preferred day for appointment?"],
+         "context_set": "doctor_time"
+        },
+        {"tag": "time",
+         "responses": ["Please tell the preferred doctors name and day"],
+         "context_set": "time"
+        }
+    ]
+}

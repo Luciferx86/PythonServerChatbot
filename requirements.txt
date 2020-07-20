@@ -1,0 +1,5 @@
+Flask
+snips_nlu
+fuzzywuzzy
+twilio
+jsonmerge
