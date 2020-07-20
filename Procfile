@@ -1,1 +1,1 @@
-python3 snip_dummy_5.py
+web: python3 snip_dummy_5.py
