@@ -4,3 +4,4 @@ fuzzywuzzy
 twilio
 jsonmerge
 python-dateutil
+https://github.com/snipsco/snips-nlu-language-resources/releases/download/snips_nlu_en-0.2.3/snips_nlu_en-0.2.3.tar.gz#egg=snips_nlu_en==0.2.3
