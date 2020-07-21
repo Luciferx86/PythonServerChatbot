@@ -1,0 +1,561 @@
+# Appointment intent
+---
+type: intent
+name: appointment
+slots:
+  - name: app
+    entity: app
+utterances:
+  - I want to book an [app](appointment)
+  - book an [app](appointment) for me.
+  - please book an [app](appointment)
+  - need an [app](appointment)
+  - want an [app](appointment)
+  - can you book an [app](appointment) for me.
+  - can i get an [app](appointment)
+  - (appointment)[app]
+  - help me book an [app](appointment)
+  - (appointment)[app]
+  
+  # Appointment intent
+---
+type: intent
+name: doctor
+slots:
+  - name: app
+    entity: app
+  - name: doc
+    entity: doc
+utterances:
+  - book an [app](appointment) with [doc](doctor)
+  - book an [app](appointment) with [doc](doctor rekha)
+  - book an [app](appointment) with [doc](dr rekha)
+  - I need an [app](appointment) with [doc](doctor)
+  - I want an [app](appointment) with [doc](doctor)
+  - can I get an [app](appointment) with [doc](doctor)
+  - Is [doc](doctor) available?
+  - help me to book an [app](appointment) with [doc](doctor)
+  - Is there a possibility to get an [app](appointment) with [doc](doctor)
+  - (appointment)[app] with [doc](doctor)
+  - (appointment)[app] [doc](doctor ajay)
+  - (appointment)[app] [doc](doctor urvashi)
+  - (doctor rekha)[doc]
+  - want to meet [doc](doctor) for checkup
+  - doctor arvind shenoi [doc](doctor arvind shenoi)
+  - doctor ashwin [doc](doctor ashwin)
+  - doctor kanjus [doc](doctor kanjus)
+  - doctor akshay [doc](doctor akshay)
+  - doctor sahu [doc](doctor sahu)
+  - dr sahu [doc](dr sahu)
+  - (appointment)[app] [doc](doctor)
+  - dr ashwin [doc](dr ashwin)
+  - dr kanjus [doc](dr kanjus)
+  - dr akshay [doc](dr akshay)
+  - dr arvind shenoi [doc](dr arvind shenoi)
+  - (appointment)[app] [doc](dr ajay)
+  - (appointment)[app] [doc](dr urvashi)
+
+---
+type: intent
+name: day
+slots:
+  - name: app
+    entity: app
+  - name: day
+    entity: day
+utterances:
+  - book an [app](appointment) on [day](day)
+  - book an [app](appointment) for [day](day)
+  - (appointment)[app] on [day](day)
+  - (appointment)[app] for [day](day)
+  - want an [app](appointment) on [day](day)
+  - want an [app](appointment) for [day](day)
+  - need an [app](appointment) on [day](day) 
+  - need an [app](appointment) for [day](day)
+  - can i get an [app](appointment) on [day](day) 
+  - can i get an [app](appointment) for [day](day)
+  - can i get an [app](appointment) [day](day)
+  - (day)[day]
+  
+---
+type: entity
+name: day
+values:
+  - Monday
+  - Tuesday
+  - Wednesday
+  - Thursday
+  - Friday
+  - Saturday
+  - Sunday
+  - today
+  - tomorrow
+  - day after tomorrow
+  - next week
+  - this week
+  
+---
+type: intent
+name: time
+slots:
+  - name: app
+    entity: app
+  - name: time
+    entity: time
+utterances:
+  - book an [app](appointment) at [time](time)
+  - book an [app](appointment) around [time](time)
+  - book an [app](appointment) for [time](time)
+  - (appointment)[app] around [time](time) 
+  - (appointment)[app] at [time](time) 
+  - (appointment)[app] for [time](time) 
+  - want an [app](appointment) at [time](time)
+  - want an [app](appointment) around [time](time)
+  - want an [app](appointment) for [time](time)
+  - need an [app](appointment) for [time](time) 
+  - need an [app](appointment) at [time](time)
+  - need an [app](appointment) around [time](time)
+  - can i get an [app](appointment) at [time](time) 
+  - can i get an [app](appointment) around [time](time) 
+  - can i get an [app](appointment) for [time](time) 
+  - (time)[time]
+  
+---
+type: entity
+name: time
+values:
+  - am
+  - pm
+  - a.m.
+  - p.m.
+  - o clock
+  - [6pm, 1pm, 2pm, 3pm, 4pm, 5pm, 7pm, 8pm, 9pm, 10pm, 11pm, 12pm]
+  - [6 p.m., 1 p.m., 2 p.m., 3 p.m., 4 p.m.,5 p.m., 7 p.m., 8 p.m., 9 p.m., 10 p.m., 11 p.m., 12 p.m.]
+  - [6 a.m., 1 a.m., 2 a.m., 3 a.m., 4 a.m., 5 a.m., 7 a.m., 8 a.m., 9 a.m., 10 a.m., 11 a.m., 12 a.m.]
+  - [6 pm, 1 pm, 2 pm, 3 pm, 4 pm, 5 pm, 7 pm, 8 pm, 9 pm, 10 pm, 11 pm, 12 pm]
+  - [1am, 2am, 3am, 4am, 5am, 6am, 7am, 8am, 9am, 10am, 11am, 12am]
+  - [6 am, 1 am, 2 am, 3 am, 4 am, 5 am, 7 am, 8 am, 9 am, 10 am, 11 am, 12 am]
+  - [12 noon, 12noon]
+  
+---
+type: intent
+name: doctor_day
+slots:
+  - name: app
+    entity: app
+  - name: doc
+    entity: doc
+  - name: day
+    entity: day
+utterances:
+  - book an [app](appointment) with [doc](doctor) for [day](day)
+  - book an [app](appointment) with [doc](doctor) on [day](day)
+  - book an [app](appointment) for [day](day) with [doc](doctor)
+  - book an [app](appointment) on [day](day) with [doc](doctor)
+  - I need/want an [app](appointment) with [doc](doctor) for [day](day)
+  - I need/want an [app](appointment) with [doc](doctor) on [day](day)
+  - I need/want an [app](appointment) for [day](day) with [doc](doctor)
+  - I need/want an [app](appointment) on [day](day) with [doc](doctor)
+  - (appointment)[app] with [doc](doctor) for [day](day)
+  - (appointment)[app] with [doc](doctor) on [day](day)
+  - (appointment)[app] for [day](day) with [doc](doctor)
+  - (appointment)[app] on [day](day) with [doc](doctor)
+  - Can I get an [app](appointment) with [doc](doctor) for [day](day)
+  - Can I get an [app](appointment) with [doc](doctor) on [day](day)
+  - Can I get an [app](appointment) for [day](day) with [doc](doctor)
+  - Can I get an [app](appointment) on [day](day) with [doc](doctor)
+  - Is [doc](doctor) available [day](day)
+  - Is [doc](doctor) available for [day](day)
+  - Is [doc](doctor) available on [day](day)
+  - I need/want to meet [doc](doctor) for [day](day)
+  - I need/want to meet [doc](doctor) on [day](day)
+  - will i get appointment at [time](time) with [doc](doc)
+  - will i get appointment with [doc](doc) at [time](time) 
+  - (doctor)[doc] [time](time)
+  - (time)[time] (doctor)[doc]
+  
+---
+type: intent
+name: doctor_time
+slots:
+  - name: app
+    entity: app
+  - name: doc
+    entity: doc
+  - name: time
+    entity: time
+utterances:
+  
+  - book an [app](appointment) with [doc](doctor) at [time](time)
+  - book an [app](appointment) with [doc](doctor) around [time](time)
+  - book an [app](appointment) at [time](time) with [doc](doctor)
+  - book an [app](appointment) around [time](time) with [doc](doctor)
+  - I need/want an [app](appointment) with [doc](doctor) at [time](time)
+  - I need/want an [app](appointment) with [doc](doctor) around [time](time)
+  - I need/want an [app](appointment) at [time](time) with [doc](doctor)
+  - I need/want an [app](appointment) around [time](time) with [doc](doctor)
+  - I need/want an [app](appointment) with [doc](doctor) at [time](time)
+  - (appointment)[app] with [doc](doctor) at [time](time)
+  - (appointment)[app] with [doc](doctor) around [time](time)
+  - (appointment)[app] at [time](time) with [doc](doctor)
+  - (appointment)[app] around [time](time) with [doc](doctor)
+  - Can I get an [app](appointment) with [doc](doctor) at [time](time)
+  - Can I get an [app](appointment) with [doc](doctor) around [time](time)
+  - Can I get an [app](appointment) at [time](time) with [doc](doctor)
+  - Can I get an [app](appointment) around [time](time) with [doc](doctor)
+  - Is [doc](doctor) available at [time](time)
+  - Is [doc](doctor) available for [day](day)
+  - Is [doc](doctor) available around [time](time)
+  - I need/want to meet [doc](doctor) at [time](time)
+  - I need/want to meet [doc](doctor) around [time](time)
+  - will i get appointment [time](time) with [doc](doc)
+  - (doctor)[doc] [day](day)
+  - (day)[day] (doctor)[doc]
+ 
+---
+type: intent
+name: day_time
+slots:
+  - name: app
+    entity: app
+  - name: day
+    entity: day
+  - name: time
+    entity: time
+utterances:
+
+
+  - book an [app](appointment) for [day](day) at [time](time)
+  - book an [app](appointment) for [day](day) around [time](time)
+  - book an [app](appointment) on [day](day) at [time](time)
+  - book an [app](appointment) on [day](day) around [time](time)
+  - book an [app](appointment) at [time](time) for [day](day) 
+  - book an [app](appointment) around [time](time) for [day](day) 
+  - book an [app](appointment) at [time](time) on [day](day)
+  - book an [app](appointment) around [time](time) on [day](day)
+  - book an [app](appointment) around [time](time) [day](day)
+  - I need/want an [app](appointment) for [day](day) at [time](time)
+  - I need/want an [app](appointment) for [day](day) around [time](time)
+  - I need/want an [app](appointment) on [day](day) at [time](time)
+  - I need/want an [app](appointment) on [day](day) around [time](time)
+  - I need/want an [app](appointment) at [time](time) for [day](day)
+  - I need/want an [app](appointment) around [time](time) on [day](day) 
+  - I need/want an [app](appointment) around [time](time) for [day](day) 
+  - I need/want an [app](appointment) at [time](time) on [day](day)
+  - I need/want an [app](appointment) at [time](time) [day](day)
+  - (appointment)[app] for [day](day) at [time](time)
+  - (appointment)[app] for [day](day) around [time](time)
+  - (appointment)[app]  on [day](day) at [time](time)
+  - (appointment)[app] on [day](day) around [time](time)
+  - (appointment)[app] at [time](time) for [day](day)
+  - (appointment)[app] around [time](time) on [day](day) 
+  - (appointment)[app] around [time](time) for [day](day)
+  - (appointment)[app] around [time](time) [day](day)
+  - (appointment)[app] at [time](time) on [day](day)
+  - Can I get an [app](appointment) for [day](day) at [time](time)
+  - Can I get an [app](appointment) for [day](day) around [time](time)
+  - Can I get an [app](appointment) on [day](day) at [time](time)
+  - Can I get an [app](appointment) on [day](day) around [time](time)
+  - Can I get an [app](appointment)  at [time](time) for [day](day)
+  - Can I get an [app](appointment) around [time](time) on [day](day) 
+  - Can I get an [app](appointment) around [time](time) for [day](day) 
+  - Can I get an [app](appointment) at [time](time) on [day](day)
+  - (day)[day] (time)[time] 
+  - (time)[time] (day)[day] 
+  
+---
+type: intent
+name: doctor_day_time
+slots:
+  - name: app
+    entity: app
+  - name: doc
+    entity: doc
+  - name: day
+    entity: day
+  - name: time
+    entity: time
+utterances:
+  
+  - book an [app](appointment) with [doc](doctor) for [day](day) at [time](time)
+  - book an [app](appointment) with [doc](doctor) on [day](day) at [time](time)
+  - book an [app](appointment) with [doc](doctor) for [day](day) around [time](time)
+  - book an [app](appointment) with [doc](doctor) on [day](day) around [time](time)
+  - book an [app](appointment) with [doc](doctor) at [time](time) for [day](day)
+  - book an [app](appointment) with [doc](doctor) around [time](time) for [day](day)
+  - book an [app](appointment) with [doc](doctor) at [time](time) on [day](day)
+  - book an [app](appointment) with [doc](doctor) around [time](time) on [day](day)
+  - book an [app](appointment) for [day](day) at [time](time) with [doc](doctor)
+  - book an [app](appointment) for [day](day) around [time](time) with [doc](doctor)
+  - book an [app](appointment) on [day](day) at [time](time) with [doc](doctor)
+  - book an [app](appointment) on [day](day) around [time](time) with [doc](doctor)
+  - book an [app](appointment) at [time](time) on [day](day) with [doc](doctor)
+  - book an [app](appointment) at [time](time) for [day](day) with [doc](doctor)
+  - book an [app](appointment) around [time](time) for [day](day) with [doc](doctor)
+  - book an [app](appointment) around [time](time) on [day](day) with [doc](doctor)
+  - book an [app](appointment) at [time](time) with [doc](doctor) on [day](day)
+  - book an [app](appointment) at [time](time) with [doc](doctor) for [day](day)
+  - book an [app](appointment) around [time](time) with [doc](doctor) on [day](day)
+  - book an [app](appointment) around [time](time) with [doc](doctor) for [day](day)
+  
+  - need an [app](appointment) with [doc](doctor) for [day](day) at [time](time)
+  - need an [app](appointment) with [doc](doctor) on [day](day) at [time](time)
+  - need an [app](appointment) with [doc](doctor) for [day](day) around [time](time)
+  - need an [app](appointment) with [doc](doctor) on [day](day) around [time](time)
+  - need an [app](appointment) with [doc](doctor) at [time](time) for [day](day)
+  - need an [app](appointment) with [doc](doctor) around [time](time) for [day](day)
+  - need an [app](appointment) with [doc](doctor) at [time](time) on [day](day)
+  - need an [app](appointment) with [doc](doctor) around [time](time) on [day](day)
+  - need an [app](appointment) for [day](day) at [time](time) with [doc](doctor)
+  - need an [app](appointment) for [day](day) around [time](time) with [doc](doctor)
+  - need an [app](appointment) on [day](day) at [time](time) with [doc](doctor)
+  - need an [app](appointment) on [day](day) around [time](time) with [doc](doctor)
+  - need an [app](appointment) at [time](time) on [day](day) with [doc](doctor)
+  - need an [app](appointment) at [time](time) for [day](day) with [doc](doctor)
+  - need an [app](appointment) around [time](time) for [day](day) with [doc](doctor)
+  - need an [app](appointment) around [time](time) on [day](day) with [doc](doctor)
+  - need an [app](appointment) at [time](time) with [doc](doctor) on [day](day)
+  - need an [app](appointment) at [time](time) with [doc](doctor) for [day](day)
+  - need an [app](appointment) around [time](time) with [doc](doctor) on [day](day)
+  - need an [app](appointment) around [time](time) with [doc](doctor) for [day](day)
+  
+  - want an [app](appointment) with [doc](doctor) for [day](day) at [time](time)
+  - want an [app](appointment) with [doc](doctor) on [day](day) at [time](time)
+  - want an [app](appointment) with [doc](doctor) for [day](day) around [time](time)
+  - want an [app](appointment) with [doc](doctor) on [day](day) around [time](time)
+  - want an [app](appointment) with [doc](doctor) at [time](time) for [day](day)
+  - want an [app](appointment) with [doc](doctor) around [time](time) for [day](day)
+  - want an [app](appointment) with [doc](doctor) at [time](time) on [day](day)
+  - want an [app](appointment) with [doc](doctor) around [time](time) on [day](day)
+  - want an [app](appointment) for [day](day) at [time](time) with [doc](doctor)
+  - want an [app](appointment) for [day](day) around [time](time) with [doc](doctor)
+  - want an [app](appointment) on [day](day) at [time](time) with [doc](doctor)
+  - want an [app](appointment) on [day](day) around [time](time) with [doc](doctor)
+  - want an [app](appointment) at [time](time) on [day](day) with [doc](doctor)
+  - want an [app](appointment) at [time](time) for [day](day) with [doc](doctor)
+  - want an [app](appointment) around [time](time) for [day](day) with [doc](doctor)
+  - want an [app](appointment) around [time](time) on [day](day) with [doc](doctor)
+  - want an [app](appointment) at [time](time) with [doc](doctor) on [day](day)
+  - want an [app](appointment) at [time](time) with [doc](doctor) for [day](day)
+  - want an [app](appointment) around [time](time) with [doc](doctor) on [day](day)
+  - want an [app](appointment) around [time](time) with [doc](doctor) for [day](day)
+  
+  - (appointment)[app] with [doc](doctor) for [day](day) at [time](time)
+  - (appointment)[app] with [doc](doctor) on [day](day) at [time](time)
+  - (appointment)[app] with [doc](doctor) for [day](day) around [time](time)
+  - (appointment)[app] with [doc](doctor) on [day](day) around [time](time)
+  - (appointment)[app] with [doc](doctor) at [time](time) for [day](day)
+  - (appointment)[app] with [doc](doctor) around [time](time) for [day](day)
+  - (appointment)[app] with [doc](doctor) at [time](time) on [day](day)
+  - (appointment)[app] with [doc](doctor) around [time](time) on [day](day)
+  - (appointment)[app] for [day](day) at [time](time) with [doc](doctor)
+  - (appointment)[app] for [day](day) around [time](time) with [doc](doctor)
+  - (appointment)[app] on [day](day) at [time](time) with [doc](doctor)
+  - (appointment)[app] on [day](day) around [time](time) with [doc](doctor)
+  - (appointment)[app] at [time](time) on [day](day) with [doc](doctor)
+  - (appointment)[app] at [time](time) for [day](day) with [doc](doctor)
+  - (appointment)[app] around [time](time) for [day](day) with [doc](doctor)
+  - (appointment)[app] around [time](time) on [day](day) with [doc](doctor)
+  - (appointment)[app] at [time](time) with [doc](doctor) on [day](day)
+  - (appointment)[app] at [time](time) with [doc](doctor) for [day](day)
+  - (appointment)[app] around [time](time) with [doc](doctor) on [day](day)
+  - (appointment)[app] around [time](time) with [doc](doctor) for [day](day)
+  
+  - can i get an [app](appointment) with [doc](doctor) for [day](day) at [time](time)
+  - can i get an [app](appointment) with [doc](doctor) on [day](day) at [time](time)
+  - can i get an [app](appointment) with [doc](doctor) for [day](day) around [time](time)
+  - can i get an [app](appointment) with [doc](doctor) on [day](day) around [time](time)
+  - can i get an [app](appointment) with [doc](doctor) at [time](time) for [day](day)
+  - can i get an [app](appointment) with [doc](doctor) around [time](time) for [day](day)
+  - can i get an [app](appointment) with [doc](doctor) at [time](time) on [day](day)
+  - can i get an [app](appointment) with [doc](doctor) around [time](time) on [day](day)
+  - can i get an [app](appointment) for [day](day) at [time](time) with [doc](doctor)
+  - can i get an [app](appointment) for [day](day) around [time](time) with [doc](doctor)
+  - can i get an [app](appointment) on [day](day) at [time](time) with [doc](doctor)
+  - can i get an [app](appointment) on [day](day) around [time](time) with [doc](doctor)
+  - can i get an [app](appointment) at [time](time) on [day](day) with [doc](doctor)
+  - can i get an [app](appointment) at [time](time) for [day](day) with [doc](doctor)
+  - can i get an [app](appointment) around [time](time) for [day](day) with [doc](doctor)
+  - can i get an [app](appointment) around [time](time) on [day](day) with [doc](doctor)
+  - can i get an [app](appointment) at [time](time) with [doc](doctor) on [day](day)
+  - can i get an [app](appointment) at [time](time) with [doc](doctor) for [day](day)
+  - can i get an [app](appointment) around [time](time) with [doc](doctor) on [day](day)
+  - can i get an [app](appointment) around [time](time) with [doc](doctor) for [day](day)
+  
+  - will i get an [app](appointment) with [doc](doctor) for [day](day) at [time](time)
+  - will i get an [app](appointment) with [doc](doctor) on [day](day) at [time](time)
+  - will i get an [app](appointment) with [doc](doctor) for [day](day) around [time](time)
+  - will i get an [app](appointment) with [doc](doctor) on [day](day) around [time](time)
+  - will i get an [app](appointment) with [doc](doctor) at [time](time) for [day](day)
+  - will i get an [app](appointment) with [doc](doctor) around [time](time) for [day](day)
+  - will i get an [app](appointment) with [doc](doctor) at [time](time) on [day](day)
+  - will i get an [app](appointment) with [doc](doctor) around [time](time) on [day](day)
+  - will i get an [app](appointment) for [day](day) at [time](time) with [doc](doctor)
+  - will i get an [app](appointment) for [day](day) around [time](time) with [doc](doctor)
+  - will i get an [app](appointment) on [day](day) at [time](time) with [doc](doctor)
+  - will i get an [app](appointment) on [day](day) around [time](time) with [doc](doctor)
+  - will i get an [app](appointment) at [time](time) on [day](day) with [doc](doctor)
+  - will i get an [app](appointment) at [time](time) for [day](day) with [doc](doctor)
+  - will i get an [app](appointment) around [time](time) for [day](day) with [doc](doctor)
+  - will i get an [app](appointment) around [time](time) on [day](day) with [doc](doctor)
+  - will i get an [app](appointment) at [time](time) with [doc](doctor) on [day](day)
+  - will i get an [app](appointment) at [time](time) with [doc](doctor) for [day](day)
+  - will i get an [app](appointment) around [time](time) with [doc](doctor) on [day](day)
+  - will i get an [app](appointment) around [time](time) with [doc](doctor) for [day](day)
+  
+  - (doctor)[doc] [day](day) [time](time)
+  - (doctor)[doc) [time](time) [day](day)
+  - (day)[day] [time](time) [doc](doctor)
+  - (day)[day] [doc](doctor) [time](time)
+  - (time)[time] [doc](doctor) (day)[day]
+  - (time)[time] (day)[day] [doc](doctor)
+  
+#Small talk
+
+---
+type: intent
+name: greeting
+slots:
+  - name: greet
+    entity: greet
+
+utterances:
+  - Hello[greet](hello)
+  - Hey [greet](hey)
+  - How are you [greet]?(How are you)
+  - How are you doing[greet]?(How are you doing?)
+  - What’s up[greet]?(What’s up)
+  - Hey What’s going on[greet]?(Hey What’s going on)
+  
+---
+type: intent
+name: Thanks
+slots:
+  - name: thanks
+    entity: thanks
+
+utterances:
+  - I am [thanks](thankyou)to you
+  - Thankyou[thanks]so much
+  - Thanks[thanks]
+  - thanks[thanks] for helping me
+  
+---
+type: intent
+name: thankyou
+slots:
+  - name: thanks
+    entity: thanks
+
+utterances:
+  - You are [thanks](funny!)
+  - It seems to be very [thanks](Funny!)
+  - I [thanks](love you) 
+  - I [thanks](like you)
+  - You’re [thanks](smart) 
+  - You are [thanks](clever) 
+  - You are [thanks](intelligent)
+  - You are so [thanks](Genius.)
+  - I appreciate your help[thanks]
+  - ok,[thanks](thanks) for your help
+  - You are so [thanks](kind.)
+  - That was really [thanks](sweet of you)
+  - I [thanks](like) you
+  - I [thanks](love)you
+  
+---
+type: intent
+name: Bye
+slots:
+  - name: bye
+    entity: bye
+
+utterances:
+  - hey,[bye](bye)
+  - Good[bye]bye
+  - bbyee[bye]
+  - M going [bye]
+  - see ya[bye]
+ 
+---
+type: intent
+name: Yeah
+slots:
+  - name: yeah
+    entity: yeah
+
+utterances:
+  - (yeah)[yeah] i know the doctors name.
+  - ok [yeah](yeah)
+  - (yes)[yeah]
+  - (yes)[yeah] i know the doctors name.
+  
+---
+type: intent
+name: nopes
+slots:
+  - name: na
+    entity: na
+
+utterances:
+  - (no)[na] I dont know doctor name
+  - (no)[na] I dont know
+  - (no)[na] I dont know doctor name
+  - (no)[na] no
+  - I [na](dont know) doctor name
+  
+---
+type: intent
+name: cardiology
+slots:
+  - name: cardiology
+    entity: cardiology
+
+utterances:
+  - (cardiology)[cardiology]
+  -  i want to see [cardiology](cardiologist)
+  -  (cardiology)[cardiology]
+ 
+---
+type: intent
+name: neurology
+slots:
+  - name: neurology
+    entity: neurology
+
+utterances:
+  - (neurology)[neurology]
+  -  i want to see [neurology](neurologist)
+  -  (neurology) [neurology]
+
+---
+type: intent
+name: orthopedician
+slots:
+  - name: orhtopedician
+    entity: orthopedician
+
+utterances:
+  - (orhtopedician)[orhtopedician]
+  -  i want to see [orhtopedician](orhtopedician)
+  -  (orhtopedician)[orhtopedician] 
+  
+---
+type: intent
+name: general physician
+slots:
+  - name: physic
+    entity: physic
+
+utterances:
+  - (physic)[physic]
+  -  i want to see [physic](physician)
+  -  (physic)[physic]
+  
+
+ 
+  
+  
+  
+  
+  
