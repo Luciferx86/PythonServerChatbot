@@ -1,1 +1,1 @@
-web: python3 proj_api.py
+web: python3 proj_api_new.py
