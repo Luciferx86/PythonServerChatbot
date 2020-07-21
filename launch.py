@@ -288,7 +288,8 @@ def evaluate_get():
 if __name__ == "__main__":
     print("* Starting web server... please wait until server has fully started")
     #app.run(host='103.24.173.234',port=4000)
-    port = int(os.environ.get("PORT", 4000))
+    # port = int(os.environ.get("PORT", 4000))
     # app.run(host='localhost',port=4000)
+    port = int(os.environ.get("PORT", 4000))
     app.run(host='0.0.0.0',port=port)
     #app.run()
