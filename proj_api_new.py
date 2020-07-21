@@ -8,7 +8,7 @@ import random
 import json
 import dateutil.parser
 from fuzzywuzzy import process
-from snips_nlu import SnipsNLUEngine
+from snips_nlu import SnipsNLUEngine, load_resources
 from snips_nlu.default_configs import CONFIG_EN
 from snips_nlu_parsers import BuiltinEntityParser
 import json
@@ -28,7 +28,8 @@ default_engine = SnipsNLUEngine()
 list_doc = ["doctor rekha pradeep","dr rekha pradeep","dr arvind shenoi" "doctor arvind shenoi", "doctor ashwin","dr ashwin", "doctor ajay",    "dr ajay","doctor urvashi", "dr urvashi", "doctor kanjus",  "dr kanjus","doctor akshay","dr akshay", "doctor sahu","dr sahu"]
 
 def init_snipsnlu():
-        engine = SnipsNLUEngine(config=CONFIG_EN)
+        # engine = SnipsNLUEngine(config=CONFIG_EN)
+        engine = SnipsNLUEngine(resources=load_resources("snips_nlu_en"))
         with io.open("proj.json") as f:
             dataset = json.load(f)
             engine.fit(dataset)
@@ -284,5 +285,7 @@ def evaluate_get():
 if __name__ == "__main__":
     print("* Starting web server... please wait until server has fully started")
     #app.run(host='103.24.173.234',port=4000)
-    app.run(host='localhost',port=4000)
+    port = int(os.environ.get("PORT", 4000))
+    # app.run(host='localhost',port=4000)
+    app.run(host='0.0.0.0',port=port)
     #app.run()
