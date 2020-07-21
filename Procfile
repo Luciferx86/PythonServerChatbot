@@ -1,1 +1,1 @@
-web: python3 snip_dummy_5.py
+web: python3 proj_api.py
